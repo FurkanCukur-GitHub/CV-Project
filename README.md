@@ -1,1 +1,1 @@
-# CV-Project
+My project is a CV preparation and CV exhibition website project. The main purpose of this project is to create an environment where people can easily create and display their CVs. Employers who examine the CVs on display will be able to easily find people with CVs that suit them.
