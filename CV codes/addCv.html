@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Add CV</title>
+    <link rel="stylesheet" href="addCv.css">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <h1><strong>Add CV</strong></h1>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="row AddCv">
+
+        <div class="col-lg-12 col-md-12">
+
+            <form action="submitCv.php" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12">
+                        <h5>Picture</h5>
+                        <input type="file" name="picture" accept="image/*"><br><br>
+                        <h5>First Name</h5>
+                        <input type="text" name="firstName" required><br><br>
+                        <h5>Last Name</h5>
+                        <input type="text" name="lastName" required><br><br>
+                        <h5>Email</h5>
+                        <input type="email" name="email"><br><br>
+                        <h5>Phone Number</h5>
+                        <input type="text" name="phoneNumber"><br><br>
+                        <h5>Profile</h5>
+                        <textarea name="profile"></textarea><br><br>
+                        <h5>Address</h5>
+                        <input type="text" name="address"><br><br>
+                        <h5>Post Code</h5>
+                        <input type="text" name="postCode"><br><br>
+                        <h5>City</h5>
+                        <input type="text" name="city"><br><br>
+                        <h5>LinkedIn URL</h5>
+                        <input type="url" name="linkedInURL"><br><br>
+                    </div>
+
+
+                    <div class="col-lg-9 col-md-9 col-sm-12">
+                        <h5>Languages</h5>
+                        <p><button type="button"
+                                onclick="addElement('languagesContainer', 'Language', [{ type: 'text', nameSuffix: 'Levels[]' }])">Add
+                                Language</button>
+                            <button type="button" onclick="deleteElement('languagesContainer')">Delete Language</button>
+                        </p>
+                        <div id="languagesContainer"></div>
+
+                        <br>
+
+                        <h5>Work Experiences</h5>
+                        <p><button type="button"
+                                onclick="addElement('workExperiencesContainer', 'WorkExperience', [{ type: 'text', nameSuffix: 'Roles[]' }, { type: 'date', nameSuffix: 'StartDates[]' }, { type: 'date', nameSuffix: 'EndDates[]' }])">Add
+                                Work Experience</button>
+                            <button type="button" onclick="deleteElement('workExperiencesContainer')">Delete Work
+                                Experience</button>
+                        </p>
+                        <div id="workExperiencesContainer"></div>
+
+                        <br>
+
+                        <h5>Educations</h5>
+                        <p><button type="button"
+                                onclick="addElement('educationsContainer', 'Education', [{ type: 'text', nameSuffix: 'Degrees[]' }, { type: 'number', nameSuffix: 'StartYears[]' }, { type: 'number', nameSuffix: 'EndYears[]' }])">Add
+                                Education</button>
+                            <button type="button" onclick="deleteElement('educationsContainer')">Delete
+                                Education</button>
+                        </p>
+                        <div id="educationsContainer"></div>
+                        <br>
+
+                        <h5>Skills</h5>
+                        <p><button type="button"
+                                onclick="addElement('skillsContainer', 'Skill', [{ type: 'text', nameSuffix: 'Levels[]' }])">Add
+                                Skill</button>
+                            <button type="button" onclick="deleteElement('skillsContainer')">Delete Skill</button>
+                        </p>
+                        <div id="skillsContainer"></div>
+
+                        <br>
+
+                        <h5>Interests</h5>
+                        <p><button type="button" onclick="addElement('interestsContainer', 'Interest')">Add
+                                Interest</button>
+                            <button type="button" onclick="deleteElement('interestsContainer')">Delete Interest</button>
+                        </p>
+                        <div id="interestsContainer"></div>
+
+                        <br>
+
+                        <h5>Hobbies</h5>
+                        <p><button type="button" onclick="addElement('hobbiesContainer', 'Hobby')">Add Hobby</button>
+                            <button type="button" onclick="deleteElement('hobbiesContainer')">Delete Hobby</button>
+                        </p>
+                        <div id="hobbiesContainer"></div>
+
+                        <br>
+
+                        <h5>References</h5>
+                        <p><button type="button"
+                                onclick="addElement('referencesContainer', 'Reference', [{ type: 'text', nameSuffix: 'Positions[]' }, { type: 'text', nameSuffix: 'ContactInformations[]' }])">Add
+                                Reference</button>
+                            <button type="button" onclick="deleteElement('referencesContainer')">Delete Reference</button>
+                        </p>
+                        <div id="referencesContainer"></div>
+
+                        <br><br>
+                    </div>
+
+                    <br>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-5"></div>
+                    <div class="col-lg-7 col-md-7">
+                        <input type="submit" value="Add CV">
+                    </div>
+                </div>
+                <br><br>
+            </form>
+        </div>
+    </div>
+
+    <script src="addDeleteButton.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

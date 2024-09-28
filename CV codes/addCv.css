@@ -1,0 +1,32 @@
+body {
+    font-family:'Times New Roman';
+    background-image: url('resim.jpg');
+    overflow-x: hidden;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center
+}
+
+button {
+    border-radius: 20px;
+}
+
+.AddCv {
+    padding-left: 30px;
+}
+
+input,
+textarea {
+    width: 150px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.7rem;
+    }
+}

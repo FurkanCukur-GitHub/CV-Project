@@ -1,0 +1,28 @@
+body, html {
+    font-family:'Times New Roman';
+    background-image: url('resim.jpg');
+}
+
+.profile-card {
+    background-color: #ececec;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.cv-details {
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.7em;
+    }
+
+    .profile-card {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+}
